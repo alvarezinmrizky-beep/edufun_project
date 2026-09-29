@@ -4,80 +4,153 @@
 
 @section('content')
 
-<div class="row justify-content-center">
+<section class="py-5">
 
-    <div class="col-md-5">
+    <div class="container">
 
-        <div class="card shadow">
+        <div class="row justify-content-center">
 
-            <div class="card-body p-4">
+            <div class="col-md-5 col-lg-4">
 
-                <h3 class="text-center mb-4">
-                    Login EduFun
-                </h3>
+                <div class="text-center mb-4">
 
-                @if ($errors->any())
+                    <div class="text-primary mb-2">
 
-                    <div class="alert alert-danger">
+                        <i
+                            class="bi bi-stars"
+                            style="font-size: 45px;"
+                        ></i>
 
-                        @foreach ($errors->all() as $error)
+                    </div>
 
-                            <div>
-                                {{ $error }}
+                    <h2 class="fw-bold">
+                        Selamat Datang!
+                    </h2>
+
+                    <p class="text-muted">
+                        Masuk ke akun EduFun kamu.
+                    </p>
+
+                </div>
+
+
+                <div class="card border-0 shadow rounded-4">
+
+                    <div class="card-body p-4">
+
+
+                        @if ($errors->any())
+
+                            <div class="alert alert-danger">
+
+                                <strong>
+                                    Login gagal
+                                </strong>
+
+                                <ul class="mb-0 mt-2">
+
+                                    @foreach ($errors->all() as $error)
+
+                                        <li>
+                                            {{ $error }}
+                                        </li>
+
+                                    @endforeach
+
+                                </ul>
+
                             </div>
 
-                        @endforeach
-
-                    </div>
-
-                @endif
+                        @endif
 
 
-                <form action="{{ url('/login') }}" method="POST">
-
-                    @csrf
-
-                    <div class="mb-3">
-
-                        <label class="form-label">
-                            Email
-                        </label>
-
-                        <input
-                            type="email"
-                            name="email"
-                            class="form-control"
-                            value="{{ old('email') }}"
-                            required
+                        <form
+                            action="{{ route('login.process') }}"
+                            method="POST"
                         >
 
+                            @csrf
+
+
+                            <div class="mb-3">
+
+                                <label class="form-label fw-semibold">
+                                    Email
+                                </label>
+
+                                <div class="input-group">
+
+                                    <span class="input-group-text">
+                                        <i class="bi bi-envelope"></i>
+                                    </span>
+
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        class="form-control"
+                                        placeholder="Masukkan email"
+                                        value="{{ old('email') }}"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="mb-4">
+
+                                <label class="form-label fw-semibold">
+                                    Password
+                                </label>
+
+                                <div class="input-group">
+
+                                    <span class="input-group-text">
+                                        <i class="bi bi-lock"></i>
+                                    </span>
+
+                                    <input
+                                        type="password"
+                                        name="password"
+                                        class="form-control"
+                                        placeholder="Masukkan password"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary w-100 py-2"
+                            >
+
+                                <i class="bi bi-box-arrow-in-right"></i>
+
+                                Masuk
+
+                            </button>
+
+                        </form>
+
+
+                        <div class="text-center mt-4">
+
+                            <a
+                                href="{{ route('home') }}"
+                                class="text-decoration-none"
+                            >
+                                ← Kembali ke Beranda
+                            </a>
+
+                        </div>
+
                     </div>
 
-
-                    <div class="mb-3">
-
-                        <label class="form-label">
-                            Password
-                        </label>
-
-                        <input
-                            type="password"
-                            name="password"
-                            class="form-control"
-                            required
-                        >
-
-                    </div>
-
-
-                    <button
-                        type="submit"
-                        class="btn btn-primary w-100"
-                    >
-                        Login
-                    </button>
-
-                </form>
+                </div>
 
             </div>
 
@@ -85,6 +158,6 @@
 
     </div>
 
-</div>
+</section>
 
 @endsection

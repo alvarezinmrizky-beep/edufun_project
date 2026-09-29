@@ -7,6 +7,23 @@ use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Guru\DashboardController as GuruDashboardController;
 use App\Http\Controllers\Siswa\DashboardController as SiswaDashboardController;
 
+/*
+|--------------------------------------------------------------------------
+| Public Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/', function () {
+    return view('public.home');
+})->name('home');
+
+Route::get('/tentang', function () {
+    return view('public.tentang');
+})->name('tentang');
+
+Route::get('/fitur', function () {
+    return view('public.fitur');
+})->name('fitur');
 
 /*
 |--------------------------------------------------------------------------

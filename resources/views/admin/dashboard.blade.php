@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('title', 'Dashboard Admin - EduFun')
 
@@ -6,32 +6,42 @@
 
 <div class="mb-4">
 
-    <h2>
+    <h2 class="fw-bold">
         Dashboard Admin
     </h2>
 
     <p class="text-muted">
-        Selamat datang di halaman administrator EduFun.
+        Selamat datang di panel administrator EduFun.
     </p>
 
 </div>
 
 
-<div class="row">
+<div class="row g-4">
 
-    <div class="col-md-4">
+    <div class="col-md-6 col-xl-3">
 
-        <div class="card shadow-sm">
+        <div class="card border-0 shadow-sm">
 
             <div class="card-body">
 
-                <h5>
-                    Manajemen User
-                </h5>
+                <div class="d-flex justify-content-between">
 
-                <p>
-                    Kelola akun siswa, guru, dan administrator.
-                </p>
+                    <div>
+
+                        <p class="text-muted mb-1">
+                            Total Siswa
+                        </p>
+
+                        <h3 class="fw-bold">
+                            0
+                        </h3>
+
+                    </div>
+
+                    <i class="bi bi-mortarboard fs-1 text-primary"></i>
+
+                </div>
 
             </div>
 
@@ -40,19 +50,29 @@
     </div>
 
 
-    <div class="col-md-4">
+    <div class="col-md-6 col-xl-3">
 
-        <div class="card shadow-sm">
+        <div class="card border-0 shadow-sm">
 
             <div class="card-body">
 
-                <h5>
-                    Mata Pelajaran
-                </h5>
+                <div class="d-flex justify-content-between">
 
-                <p>
-                    Kelola mata pelajaran EduFun.
-                </p>
+                    <div>
+
+                        <p class="text-muted mb-1">
+                            Total Guru
+                        </p>
+
+                        <h3 class="fw-bold">
+                            0
+                        </h3>
+
+                    </div>
+
+                    <i class="bi bi-person-badge fs-1 text-success"></i>
+
+                </div>
 
             </div>
 
@@ -61,19 +81,60 @@
     </div>
 
 
-    <div class="col-md-4">
+    <div class="col-md-6 col-xl-3">
 
-        <div class="card shadow-sm">
+        <div class="card border-0 shadow-sm">
 
             <div class="card-body">
 
-                <h5>
-                    Laporan
-                </h5>
+                <div class="d-flex justify-content-between">
 
-                <p>
-                    Lihat perkembangan pembelajaran siswa.
-                </p>
+                    <div>
+
+                        <p class="text-muted mb-1">
+                            Mata Pelajaran
+                        </p>
+
+                        <h3 class="fw-bold">
+                            0
+                        </h3>
+
+                    </div>
+
+                    <i class="bi bi-book fs-1 text-warning"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="col-md-6 col-xl-3">
+
+        <div class="card border-0 shadow-sm">
+
+            <div class="card-body">
+
+                <div class="d-flex justify-content-between">
+
+                    <div>
+
+                        <p class="text-muted mb-1">
+                            Total Kuis
+                        </p>
+
+                        <h3 class="fw-bold">
+                            0
+                        </h3>
+
+                    </div>
+
+                    <i class="bi bi-question-circle fs-1 text-danger"></i>
+
+                </div>
 
             </div>
 

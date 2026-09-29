@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.guru')
 
 @section('title', 'Dashboard Guru - EduFun')
 
@@ -6,7 +6,7 @@
 
 <div class="mb-4">
 
-    <h2>
+    <h2 class="fw-bold">
         Dashboard Guru
     </h2>
 
@@ -17,21 +17,63 @@
 </div>
 
 
-<div class="row">
+<div class="row g-4">
 
-    <div class="col-md-4">
+    <div class="col-md-6 col-xl-3">
 
-        <div class="card shadow-sm">
+        <div class="card border-0 shadow-sm">
 
             <div class="card-body">
 
-                <h5>
+                <p class="text-muted">
+                    Jumlah Siswa
+                </p>
+
+                <h3 class="fw-bold">
+                    0
+                </h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="col-md-6 col-xl-3">
+
+        <div class="card border-0 shadow-sm">
+
+            <div class="card-body">
+
+                <p class="text-muted">
+                    Mata Pelajaran
+                </p>
+
+                <h3 class="fw-bold">
+                    0
+                </h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="col-md-6 col-xl-3">
+
+        <div class="card border-0 shadow-sm">
+
+            <div class="card-body">
+
+                <p class="text-muted">
                     Materi
-                </h5>
-
-                <p>
-                    Kelola materi pembelajaran siswa.
                 </p>
+
+                <h3 class="fw-bold">
+                    0
+                </h3>
 
             </div>
 
@@ -40,40 +82,19 @@
     </div>
 
 
-    <div class="col-md-4">
+    <div class="col-md-6 col-xl-3">
 
-        <div class="card shadow-sm">
+        <div class="card border-0 shadow-sm">
 
             <div class="card-body">
 
-                <h5>
+                <p class="text-muted">
                     Kuis
-                </h5>
-
-                <p>
-                    Kelola kuis dan soal pembelajaran.
                 </p>
 
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="col-md-4">
-
-        <div class="card shadow-sm">
-
-            <div class="card-body">
-
-                <h5>
-                    Progress Siswa
-                </h5>
-
-                <p>
-                    Pantau perkembangan belajar siswa.
-                </p>
+                <h3 class="fw-bold">
+                    0
+                </h3>
 
             </div>
 
